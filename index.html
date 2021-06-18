@@ -17,11 +17,11 @@
 
     <!-- My List -->
     <div class="all-tasks">
-        <h2 class="task-list-title">My List</h2>
+        <h2 class="task-list-title">My Lists</h2>
         <ul class="task-list">
-            <li class="active-list">Youtube</li>
-            <li>Work</li>
-            <li>Grocery</li>
+            <li class="list-name active-list">Youtube</li>
+            <li class="list-name" >Work</li>
+            <li class="list-name" >Grocery</li>
         </ul>
 
         <!-- Add New List -->
@@ -33,7 +33,7 @@
                 aria-label="new list name"
             />
             <button 
-                class="btn-list" 
+                class="btn create" 
                 aria-label="create new list"
             >
                 +
@@ -94,7 +94,7 @@
                         aria-label="add a new task"
                     />
                     <button 
-                        class="btn-task" 
+                        class="btn create" 
                         aria-label="create new task"
                     >
                         +
@@ -102,8 +102,8 @@
                 </form>
             </div>
             <div class="delete-stuff">
-                <button class="btn-delete"> Clear Completed Tasks</button>
-                <button class="btn-delete">Delete List</button>
+                <button class="btn delete"> Clear Completed Tasks</button>
+                <button class="btn delete">Delete List</button>
             </div>
         </div>
     </div>
