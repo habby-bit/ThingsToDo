@@ -7,15 +7,15 @@ body {
     background-color: #a16fb0;
     color: #e9daeb;
 
-    display: grid;
+    /* display: grid;
     grid:
         "header header header header" auto
         "...... lists  active ......" auto /
-        1fr minmax(100px, 300px) minmax(300px, 700px) 1fr;
+        1fr minmax(100px, 300px) minmax(300px, 700px) 1fr; */
 }
 
 .title {
-    grid-area: header;
+    /* grid-area: header; */
     text-align: center;
     font-size: calc(7vw + 2rem);
     font-weight: 900;
@@ -25,9 +25,9 @@ body {
     margin-bottom: .43em;
 }
 
-.all-lists {
+/* .all-lists {
     grid-area: lists;
-}
+} */
 
 .lists {
     font-size: 1.2rem;
@@ -118,7 +118,7 @@ form {
     font-weight: 700;
 }
 .todo-list {
-    grid-area: active;
+    /* grid-area: active; */
     background: whitesmoke;
     color: #935ba4;
     margin-left: 4.23em;
