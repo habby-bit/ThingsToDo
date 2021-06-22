@@ -11,7 +11,7 @@ body {
     grid:
         "header header header header" auto
         "...... lists  active ......" auto /
-        1fr minmax(100px, 300px) minmax(700px, 500px) 1fr;
+        1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
 
 .title {
@@ -21,15 +21,14 @@ body {
     font-weight: 900;
     color: rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
-    margin-top: .03em;
-    margin-bottom: .43em;
+    margin-top: .2em
 }
 
-.all-lists {
+.all-tasks {
     grid-area: lists;
 }
 
-.lists {
+.task-list{
     font-size: 1.2rem;
     line-height: 1.7;
     list-style: circle;
@@ -49,11 +48,7 @@ form {
     display: flex;
 }
 
-.new-list,
-.new-task,
-.newListBtn, 
-.newTaskBtn,
-.deleteBtn {
+.btn {
     cursor: pointer;
     background: 0;
     border: 0;
@@ -61,56 +56,50 @@ form {
     color: inherit;
 }
 
-.new-list,
-.new-task,
-.newListBtn, 
-.newTaskBtn {
+.btn.create {
     font-size: 1.5rem;
     font-weight: 600;
     margin-right: 0.25em;
     transition: transform 150ms ease-in-out;
 }
 
-.newListBtn:hover, 
-.newTaskBtn:hover {
+.btn.create:hover {
     transform: scale(1.5);
 }
 
-.deleteBtn {
+.btn.delete {
     font-weight: 600;
     margin-right: 60px;
 }
 
-.deleteBtn:hover {
+.btn.delete:hover {
     color: gainsboro
 }
 
-.new-list,
-.new-task {
+.new {
     background: transparent;
     border: 0;
     color: inherit;
     border-bottom: 1px solid currentColor;
     font-size: inherit;
     outline: none;
-    transition: border-bottom 50ms ease-in-out;
+
+    transition: border-bottom 150ms ease-in-out;
 }
 
-.new-list:hover:focus,
-.new-task:hover:focus {
+.new:focus {
     border-bottom-width: 3px;
 }
 
-.new-list:hover:focus::placeholder, 
-.new-task:hover:focus::placeholder {
+.new:focus::placeholder {
     opacity: 0.4;
 }
 
-.newListBtn {
+.new.list {
     font-size: 1.2rem;
 }
 
-.newTaskBtn {
+.new.task {
     margin-bottom: 0;
 }
 
@@ -121,7 +110,6 @@ form {
     grid-area: active;
     background: whitesmoke;
     color: #935ba4;
-    margin-left: 5.23em;
 }
 
 .todo-header {
@@ -146,7 +134,7 @@ form {
     position: relative;
 }
 
-.checkbox {
+[type="checkbox"] {
     opacity: 0;
     position: absolute;
 }
@@ -166,7 +154,7 @@ form {
     bottom: -0.5em;
     height: 1px;
     background: currentColor;
-    opacity: 0.2;
+    opacity: .2;
 }
 
 .task {
@@ -192,21 +180,22 @@ form {
 }
 
 .task:hover .custom-checkbox, 
-.checkbox:focus + label .custom-checkbox {
+[type="checkbox"]:focus + label .custom-checkbox {
     transform: scale(1.2);
     color: gray;
 }
 
-.checkbox:checked + label .custom-checkbox {
+[type="checkbox"]:checked + label .custom-checkbox {
     background: gray;
     border-color: gray;
     box-shadow: inset 0 0 0px 2px whitesmoke;
     transform: scale(.5);
 }
 
-.checkbox:checked + label {
+[type="checkbox"]:checked + label {
     opacity: 0.5;
     transform: scale(.95);
+
 }
 
 .task label::after {
@@ -222,12 +211,12 @@ form {
     transition: transform 100ms ease-in-out;
 }
 
-.checkbox:checked + label::after {
+[type="checkbox"]:checked + label::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.delete {
+.delete-stuff {
     display: flex;
     justify-content: left;
     position: absolute;

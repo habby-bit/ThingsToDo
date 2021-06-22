@@ -16,9 +16,9 @@
     <h1 class="title"> Things I Need To Do</h1>
 
     <!-- My List -->
-    <div class="all-lists">
-        <h2 class="lists-title">My Lists</h2>
-        <ul class="lists">
+    <div class="all-tasks">
+        <h2 class="task-list-title">My Lists</h2>
+        <ul class="task-list">
             <li class="list-name active-list">Books</li>
             <li class="list-name" >Work</li>
             <li class="list-name" >Grocery</li>
@@ -28,12 +28,12 @@
         <form action="">
             <input 
                 type="text"
-                class="new-list"
+                class="new list"
                 placeholder="add a new list"
                 aria-label="new list name"
             />
             <button 
-                class="newListBtn" 
+                class="btn create" 
                 aria-label="create new list"
             >
                 +
@@ -52,7 +52,6 @@
                 <!-- Task 1 -->
                 <div class="task">
                     <input 
-                        class = "checkbox"
                         type="checkbox"
                         id="task-1"
                     />
@@ -64,7 +63,6 @@
                 <!-- Task 2 -->
                 <div class="task">
                     <input 
-                        class = "checkbox"
                         type="checkbox"
                         id="task-2"
                     />
@@ -76,7 +74,6 @@
                 <!-- Task 3 -->
                 <div class="task">
                     <input 
-                        class = "checkbox"
                         type="checkbox"
                         id="task-3"
                     />
@@ -92,21 +89,21 @@
                 <form action="">
                     <input 
                         type="text"
-                        class="new-task"
+                        class="new task"
                         placeholder="add a new task"
                         aria-label="add a new task"
                     />
                     <button 
-                        class="newTaskBtn" 
+                        class="btn create" 
                         aria-label="create new task"
                     >
                         +
                     </button>
                 </form>
             </div>
-            <div class="delete">
-                <button class="deleteBtn"> Clear Completed Tasks</button>
-                <button class="deleteBtn">Delete List</button>
+            <div class="delete-stuff">
+                <button class="btn delete"> Clear Completed Tasks</button>
+                <button class="btn delete">Delete List</button>
             </div>
         </div>
     </div>
