@@ -15,130 +15,105 @@
     <link rel='stylesheet' href ="main.css" />
     <script defer src="script.js"></script>
 </head>
-<body>
+<body id="styleOverride">
     <div class="container-xl">
-
-    <h1 class="title"> Things I Need To Do</h1>
-
-
-    <div class = "row">
-
-        <div class="col-lg-4">
-
-    <!-- My List -->
-    <div class="all-lists">
-        <h2 class="lists-title">My Lists</h2>
-        <ul class="lists" data-lists>
-            <!-- <li class="list-name active-list">Books</li>
-            <li class="list-name" >Work</li>
-            <li class="list-name" >Grocery</li> -->
-        </ul>
-
-        <!-- Add New List -->
-        <form action="" data-new-list-form>
-            <input 
-                type="text"
-                class="new-list"
-                data-new-list-input
-                placeholder="add a new list"
-                aria-label="new list name"
-            />
-            <button 
-                class="newListBtn" 
-                aria-label="create new list"
-            >
-                +
-            </button>
-        </form>
-    </div>
-
-
-
-</div>
-
-
-    <div class = "col-lg-8">
-
-
-    <!-- Todo List -->
-    <div class="todo-list" data-list-display-container>
-        <div class="todo-header">
-            <h2 class="list-title" data-list-title>Books</h2>
-            <p class="task-count" data-list-count>3 tasks remaining</p>
-        </div>
-        <div class="todo-body">
-            <div class="tasks" data-tasks>
-                <!-- Task 1 -->
-                <!-- <div class="task">
-                    <input 
-                        class = "checkbox"
-                        type="checkbox"
-                        id="task-1"
-                    />
-                    <label for="task-1">
-                        <span class="custom-checkbox"></span>
-                        Me Before You
-                    </label>
-                </div> -->
-                <!-- Task 2 -->
-                <!-- <div class="task">
-                    <input 
-                        class = "checkbox"
-                        type="checkbox"
-                        id="task-2"
-                    />
-                    <label for="task-2">
-                        <span class="custom-checkbox"></span>
-                        Hold Still
-                    </label>
-                </div> -->
-                <!-- Task 3 -->
-                <!-- <div class="task">
-                    <input 
-                        class = "checkbox"
-                        type="checkbox"
-                        id="task-3"
-                    />
-                    <label for="task-3">
-                        <span class="custom-checkbox"></span>
-                        Half Of A Yellow Sun
-                    </label>
-                </div> -->
-            </div> 
-
-            <!-- Add New Task -->
-            <div class="new-task-creator">
-                <form action="" data-new-task-form>
-                    <input 
-                        type="text"
-                        data-new-task-input
-                        class="new-task"
-                        placeholder="add a new task"
-                        aria-label="add a new task"
-                    />
-                    <button 
-                        class="newTaskBtn" 
-                        aria-label="create new task"
-                    >
-                        +
-                    </button>
-                </form>
+        <h1 class="title"> Things I Need To Do</h1>
+        <div class = "row">
+            <div class="col-lg-4 col-md-4 col-sm-9">
+                <!-- My List -->
+                <div class="all-lists">
+                    <h2 class="lists-title">My Lists</h2>
+                    <ul class="lists" data-lists></ul> 
+                    <!-- Add New List -->
+                    <form action="" data-new-list-form>
+                        <input 
+                            type="text"
+                            class="new-list"
+                            data-new-list-input
+                            placeholder="new list"
+                            aria-label="new list name"
+                        />
+                        <button 
+                            class="newListBtn" 
+                            aria-label="create new list"
+                        > +
+                        </button>
+                    </form>
+                        <button class="deleteBtn" data-delete-list-button>Delete List</button>
+                </div>
             </div>
-            <div class="delete">
-                <button class="deleteBtn" data-clear-complete-tasks-button> Clear Completed Tasks</button>
-                <button class="deleteBtn" data-delete-list-button>Delete List</button>
+            <!-- Todo List -->
+            <div class = "col-lg-8 col-md-8 col-sm-9">
+                <div class="noList" data-no-list-display-container></div>
+                <div class="todo-list" data-list-display-container>
+                    <div class="todo-header">
+                        <h2 class="list-title" data-list-title>Example List</h2>
+                        <p class="task-count" data-list-count>3 tasks remaining</p>
+                    </div>
+                    <div class="todo-body">
+                        <div class="tasks" data-tasks>
+                            <!-- Task 1 -->
+                            <div class="task">
+                                <input 
+                                    class = "checkbox"
+                                    type="checkbox"
+                                    id="task-1"
+                                />
+                                <label for="task-1">
+                                    <span class="custom-checkbox"></span>
+                                    Example Task 1
+                                </label>
+                            </div>
+                            <!-- Task 2 -->
+                            <div class="task">
+                                <input 
+                                    class = "checkbox"
+                                    type="checkbox"
+                                    id="task-2"
+                                />
+                                <label for="task-2">
+                                    <span class="custom-checkbox"></span>
+                                    Example Task 2
+                                </label>
+                            </div>
+                            <!-- Task 3 -->
+                            <div class="task">
+                                <input 
+                                    class = "checkbox"
+                                    type="checkbox"
+                                    id="task-3"
+                                />
+                                <label for="task-3">
+                                    <span class="custom-checkbox"></span>
+                                    Example Task 3
+                                </label>
+                            </div>
+                        </div> 
+                        <!-- Add New Task -->
+                        <div class="new-task-creator">
+                            <form action="" data-new-task-form>
+                                <input 
+                                    type="text"
+                                    data-new-task-input
+                                    class="new-task"
+                                    placeholder="new task"
+                                    aria-label="add a new task"
+                                />
+                                <button 
+                                    class="newTaskBtn" 
+                                    aria-label="create new task"
+                                > +
+                                </button>
+                            </form>
+                        </div>
+                        <div class="delete">
+                            <button class="deleteBtn" data-clear-complete-tasks-button> Clear Completed Tasks</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-</div>
-
-
-</div>
-
-
-</div>
     <template id="task-template">
         <div class="task">
             <input 
