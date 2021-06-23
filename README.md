@@ -1,4 +1,4 @@
-# ThingsToDo
+# To Do App
 
 ## Description
 
@@ -24,7 +24,7 @@ An incredibly dynamic todo list application that allows the user to track comple
 
 Below is an example image of the app!
 
-![TodoApp Still Example](TodoAppStill.png)
+![TodoApp Still Example](ToDoAppStill.png)
 
 
 ## App

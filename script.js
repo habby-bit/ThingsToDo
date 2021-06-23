@@ -16,7 +16,6 @@ const LOCAL_STORAGE_LIST_KEY = 'task.lists'
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
-console.log('lists:', lists)
 let selectedListId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY)
 
 if (lists.length === 0) {
@@ -25,12 +24,10 @@ if (lists.length === 0) {
 }
 
 const noList = document.createElement('h1')
-const text = document.createTextNode("Click a List!")
+const text = document.createTextNode("Add or click a list!")
 noList.appendChild(text)
 noList.classList.add('noList')
 noListContainer.appendChild(noList)
-
-console.log('noList:', noList)
 
 listContainer.addEventListener('click', e => {
     if (e.target.tagName.toLowerCase() === 'li') {
@@ -114,7 +111,6 @@ const render = () => {
     if (selectedListId == null) {
         listDisplayContainer.style.display = 'none'
         noListContainer.style.display= ''
-        console.log('noListContainer:', noListContainer)
     } else {
         noListContainer.style.display = 'none'
         listDisplayContainer.style.display = ''
