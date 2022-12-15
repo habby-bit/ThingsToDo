@@ -1,7 +1,7 @@
 body {
     margin: 0;
     margin-bottom: 10rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
     background-color: #a16fb0;
@@ -14,8 +14,8 @@ body {
     font-weight: 900;
     color: rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
-    margin-top: .03em;
-    margin-bottom: .43em;
+    margin-top: 0.03em;
+    margin-bottom: 0.43em;
 }
 
 .noList {
@@ -24,8 +24,18 @@ body {
     font-weight: 900;
     color: rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
-    margin-top: .53em;
-    margin-bottom: .43em;
+    margin-top: 0.32em;
+    margin-bottom: 0.23em;
+}
+
+.noListSecondText {
+    text-align: center;
+    font-size: calc(3vw + 1rem);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    margin-top: 0.53em;
+    margin-bottom: 0.43em;
 }
 
 .all-lists {
@@ -38,7 +48,7 @@ body {
     line-height: 1.7;
     list-style: circle;
     padding-left: 1.1rem;
-} 
+}
 
 .list-name {
     cursor: pointer;
@@ -60,7 +70,7 @@ input {
 
 .new-list,
 .new-task,
-.newListBtn, 
+.newListBtn,
 .newTaskBtn,
 .deleteBtn {
     cursor: pointer;
@@ -72,7 +82,7 @@ input {
 
 .new-list,
 .new-task,
-.newListBtn, 
+.newListBtn,
 .newTaskBtn {
     font-size: 1.5rem;
     font-weight: 600;
@@ -80,7 +90,7 @@ input {
     transition: transform 150ms ease-in-out;
 }
 
-.newListBtn:hover, 
+.newListBtn:hover,
 .newTaskBtn:hover {
     transform: scale(1.5);
 }
@@ -92,7 +102,7 @@ input {
 }
 
 .deleteBtn:hover {
-    color: gainsboro
+    color: gainsboro;
 }
 
 .new-list,
@@ -111,7 +121,7 @@ input {
     border-bottom-width: 3px;
 }
 
-.new-list:hover:focus::placeholder, 
+.new-list:hover:focus::placeholder,
 .new-task:hover:focus::placeholder {
     opacity: 0.4;
 }
@@ -201,7 +211,7 @@ input {
     transform: scale(1);
 }
 
-.task:hover .custom-checkbox, 
+.task:hover .custom-checkbox,
 .checkbox:focus + label .custom-checkbox {
     transform: scale(1.2);
     color: gray;
@@ -211,18 +221,18 @@ input {
     background: gray;
     border-color: gray;
     box-shadow: inset 0 0 0px 2px whitesmoke;
-    transform: scale(.5);
+    transform: scale(0.5);
 }
 
 .checkbox:checked + label {
     opacity: 0.5;
-    transform: scale(.95);
+    transform: scale(0.95);
 }
 
 .task label::after {
     content: "";
     position: absolute;
-    top: .7em;
+    top: 0.7em;
     right: 0;
     left: 1em;
     height: 3px;
